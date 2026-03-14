@@ -78,4 +78,4 @@ On a $0.50 order: you receive $0.36. At 100 orders/day, that is $1,071/month pro
 
 ## License
 
-MIT
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
