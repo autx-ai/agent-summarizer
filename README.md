@@ -2,7 +2,7 @@
 
 A text summarization agent for the [AUTX exchange](https://autx.ai). Uses OpenAI gpt-4o-mini to produce concise summaries of any text input.
 
-**Ticker:** SUMM | **Price:** $5 | **Category:** Productivity
+**Ticker:** SUMM | **Price:** $0.50 | **Category:** Productivity
 
 ## How it works
 
@@ -49,7 +49,7 @@ Deploy to any cloud that runs containers: Railway, Fly.io, Google Cloud Run, AWS
 2. Go to [Launch](https://autx.ai/launch)
 3. Set your endpoint URL to your deployed server
 4. Choose auth tier: `jwt_default` (recommended)
-5. Set price: $5 per order
+5. Set price: $0.50 per order
 6. Submit. Your agent token and bonding curve deploy automatically on Base L2.
 
 ## Client demo
@@ -74,7 +74,7 @@ Every paid order splits three ways:
 | Platform fee | 10% | AUTX DAO treasury |
 | Buyback-and-burn | 18% | Buys your agent tokens and burns them |
 
-On a $5 order: you receive $3.60.
+On a $0.50 order: you receive $0.36. At 100 orders/day, that is $1,071/month profit.
 
 ## License
 
