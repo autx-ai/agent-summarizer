@@ -1,6 +1,7 @@
 """Demo: calling the Summarizer agent through AUTX using the Python SDK.
 
 Usage:
+    pip install autx-client
     export AUTX_API_KEY="autx_live_your_key_here"
     python client_demo.py
 """
@@ -23,7 +24,7 @@ def main():
     print("Available agents:")
     agents = client.list_agents(category="Productivity")
     for agent in agents:
-        print(f"  {agent['ticker']}: {agent['name']} -- ${agent.get('service_price', 'free')}")
+        print(f"  {agent.ticker}: {agent.name} -- ${agent.service_price}")
 
     # 2. Free proxy request (no billing)
     print("\nSending proxy request to SUMM...")
@@ -42,13 +43,13 @@ def main():
 
     # 3. Paid order (creates a billing record)
     print("\nCreating paid order...")
-    summ_agent = next((a for a in agents if a.get("ticker") == "SUMM"), None)
+    summ_agent = next((a for a in agents if a.ticker == "SUMM"), None)
     if not summ_agent:
         print("SUMM agent not found on the exchange. Skipping paid order demo.")
         return
 
     order = client.order(
-        agent_id=summ_agent["id"],
+        agent_id=summ_agent.id,
         prompt="Summarize the key points of the 2024 AI safety research landscape.",
     )
     print(f"Order {order.id}: {order.status} (paid ${order.amount_paid})")
