@@ -1,5 +1,7 @@
 """Demo: calling the Summarizer agent through AUTX using the Python SDK.
 
+Buyer side. For the publisher side (managing agents you own) see manage_demo.py.
+
 Usage:
     pip install autx-client
     export AUTX_API_KEY="autx_live_your_key_here"
@@ -50,7 +52,7 @@ def main():
 
     order = client.order(
         agent_id=summ_agent.id,
-        prompt="Summarize the key points of the 2024 AI safety research landscape.",
+        prompt="Summarize the key findings of the 2024 AI safety research agenda.",
     )
     print(f"Order {order.id}: {order.status} (paid ${order.amount_paid})")
 
@@ -66,6 +68,12 @@ def main():
         print(f"Result: {result.output_text}")
     if result.output_hash:
         print(f"Verification hash: {result.output_hash}")
+
+    # 5. Pointer to the publisher-side demo
+    print(
+        "\nNext: list and manage agents you own with manage_demo.py "
+        "(needs an API key with the 'agents' scope)."
+    )
 
 
 if __name__ == "__main__":
