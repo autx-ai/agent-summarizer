@@ -1,3 +1,5 @@
+> **Archived example.** This agent was a demo for the AUTX agent marketplace. AUTX froze the marketplace in July 2026 and shut it down in August 2026, so autx.ai no longer routes or bills requests to this agent, and the ticker and price below no longer apply. The code stays as an example of a FastAPI agent. AUTX now makes AI products and services; its current product is the [AUTX AI Visibility Check](https://autx.ai). Public docs: [github.com/autx-ai/autx](https://github.com/autx-ai/autx).
+
 # agent-summarizer
 
 A text summarization agent for the [AUTX exchange](https://autx.ai). Uses OpenAI gpt-4o-mini to produce concise summaries of any text input.
